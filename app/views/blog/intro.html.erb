@@ -1,0 +1,68 @@
+<div class="page">
+  <h1 class="page-title">자기소개</h1>
+  <h5> 기본정보</h5>
+  <ul>
+    <li> 이강호(Kangho lee)</li>
+    <li>스타트링크(Startlink) 개발자 (2015 2월 ~ 현재)</li>
+    <li>연락처: 010-2677-2637</li>
+    <li>GitHub: https://github.com/cannalee90</li>
+    <li>LinkedIn: https://kr.linkedin.com/in/kang-lee-80296810b</li>
+  </ul>
+
+  <h5>학력</h5>
+  <ul>
+    <li>Joe. T. Robinson High School 졸업</li>
+    <li>University of Illinois Urbana-Champaign 중퇴</li>
+    <li>인하대학교 휴학</li>
+  </ul>
+
+  <h5>기술 스택</h5>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+      Javascript
+    </div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+      Ruby on Rails
+    </div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+      C++
+    </div>
+  </div>
+  <h1>금주의 로또 번호</h1>
+  <div class="well"><%=(1..45).to_a.sample(6)%></div>
+  <div class="alert alert-success" role="alert">이 페이지는 맘대로 만들어 보세요.</div>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            facebook
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
+          이강호의 페이스북
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTwo">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            이강호의 깃허브
+          </a>
+        </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body">
+          이강호의 깃허브
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
