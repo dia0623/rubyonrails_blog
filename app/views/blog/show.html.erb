@@ -1,0 +1,13 @@
+<div class="post">
+    <h1 class="post-title"><%= @post.title %></h1>
+    <span class="post-date"><%= @post.created_at %></span>
+    <p style="white-space: pre-line;">
+        <%= @post.content %>
+    </p>
+</div>
+<a href = '/blog/destroy/<%= @post.id %>'>
+    <button class="btn btn-default">delete</button>
+</a>
+<a href = '/blog/edit/<%= @post.id %>'>
+    <button class="btn btn-default">edit</button>
+</a>
