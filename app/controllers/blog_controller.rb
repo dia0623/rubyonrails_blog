@@ -1,7 +1,17 @@
 class BlogController < ApplicationController
-  def intro
+  before_action :authenticate_user!, only: [:edit, :write]
+  before_action :check_admin, only: [:edit, :write]
+  
+  def check_admin
+    if user_signed_in?
+      if current_user.email != "96eric@kaist.ac.kr"
+        redirect_to '/' 
+      end
+    end
   end
   
+  def intro
+  end
   def new
   end
   
@@ -9,6 +19,7 @@ class BlogController < ApplicationController
     @post = Post.new
     @post.title = params[:title]
     @post.content = params[:content]
+    @post.user_id = current_user.id
     @post.save
     redirect_to '/blog/show/' + @post.id.to_s
   end
@@ -24,7 +35,7 @@ class BlogController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to '/'
+    redirect_to '/blog/list'
   end
   
   def edit

@@ -16,7 +16,6 @@
   <%= stylesheet_link_tag    'application'%>
   <%= csrf_meta_tags %>
 
-  <link rel="stylesheet" href="/app/views/layouts/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
@@ -24,14 +23,17 @@
   <!-- Toggleable sidebar -->
   <div class="sidebar" id="sidebar">
     <div class="sidebar-item">
-      <p>자기소개를 입력해주세요.</p>
+      <p>MIN's Blog</p>
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="/">Home</a>
-    </nav>
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="/blog/intro">Intro</a>
+      <a class="sidebar-nav-item" href="/blog/intro">Home</a>
+      <a class="sidebar-nav-item" href="/blog/list">Essays</a>
+      <% if user_signed_in? %>
+        <a class="sidebar-nav-item" href='/users/sign_out'><%= current_user.email %> (logout)</a>
+      <% else %>
+        <a class="sidebar-nav-item" href='/users/sign_in'>Sign in</a>
+      <% end %>
     </nav>
 
     <div class="sidebar-item">
