@@ -3,7 +3,8 @@
         <input type = 'text' name = 'title' class="form-control" value = "<%= @post.title %>">
     </div>
     <div class="form-group">
-        <textarea name = 'content' class="form-control" rows = "10"><%= @post.content %></textarea>
+        <trix-editor input="x" class="form-control"></trix-editor>
+        <input id="x" type="hidden" name="content" value="<%= @post.content %>">
     </div>
     <input type = 'submit' value='update'>
 </form>
