@@ -1,11 +1,11 @@
 class BlogController < ApplicationController
-  before_action :authenticate_user!, only: [:edit, :write]
-  before_action :check_admin, only: [:edit, :write]
+  before_action :authenticate_user!, only: [:edit, :new]
+  before_action :check_admin, only: [:edit, :new, :destroy]
   
   def check_admin
     if user_signed_in?
       if current_user.email != "96eric@kaist.ac.kr"
-        redirect_to '/' 
+        redirect_to '/blog/list' 
       end
     end
   end

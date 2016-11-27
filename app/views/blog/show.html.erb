@@ -10,11 +10,13 @@
 </a>
 <% if user_signed_in? %>
     <% if current_user.email == "96eric@kaist.ac.kr" %>
+
+    <% end %>
+<% end %>
+
         <a href = '/blog/destroy/<%= @post.id %>'>
             <button class="btn btn-default">delete</button>
         </a>
         <a href = '/blog/edit/<%= @post.id %>'>
             <button class="btn btn-default">edit</button>
         </a>
-    <% end %>
-<% end %>
